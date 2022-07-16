@@ -35,6 +35,9 @@ struct ContentView: View {
             HStack {
                 ForEach(0..<3) { index in
                     CustomLetterBox(color: .red, text: selectedLetters[index])
+                        .onTapGesture {
+                            selectedLetters[index] = letter
+                        }
                 }
             }
         }
